@@ -25,11 +25,11 @@ public class Client {
         FileSystemItem file2 = new org.gof.composite.folder.domain.File("File2.txt");
         FileSystemItem file3 = new org.gof.composite.folder.domain.File("File3.txt");
         FileSystemItem file4 = new org.gof.composite.folder.domain.File("File4.txt");
-        FileSystemItem sf1 = new Folder("sf1", Arrays.asList(file1));
-        FileSystemItem sf2 = new Folder("sf2", Arrays.asList(file2, sf1));
-        FileSystemItem folder = new Folder("folder", Arrays.asList(sf2, file3, file4));
+        FileSystemItem sf1 = new Folder("documents", Arrays.asList(file1));
+        FileSystemItem sf2 = new Folder("projects", Arrays.asList(file2, sf1));
+        FileSystemItem folder = new Folder("root", Arrays.asList(sf2, file3, file4));
 
-        folder.print("");
+        folder.print(">");
 
         System.out.println("------------");
 
